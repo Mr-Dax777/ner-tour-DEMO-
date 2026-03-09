@@ -1,0 +1,141 @@
+/* ============================= */
+/* DESIGN SYSTEM (COLOR VARIABLES) */
+/* ============================= */
+
+:root{
+
+    /* Navbar */
+    --navbar-bg:#0F172A;
+
+    /* Primary Buttons */
+    --primary:#3B82F6;
+    --primary-hover:#2563EB;
+
+    /* Backgrounds */
+    --page-bg:#F5F5F5;
+    --card-bg:#FFFFFF;
+
+    /* Text */
+    --text-light:#FFFFFF;
+    --text-dark:#1F2937;
+
+    /* Borders */
+    --border-light:#E5E7EB;
+
+    /* Glass effect */
+    --glass-bg:rgba(255,255,255,0.15);
+    --glass-blur:blur(12px);
+
+    /* Shadow */
+    --shadow-soft:0 8px 20px rgba(0,0,0,0.08);
+}
+
+
+/* ============================= */
+/* RESET */
+/* ============================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* ============================= */
+/* BODY */
+/* ============================= */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:var(--page-bg);
+    color:var(--text-dark);
+}
+
+
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:22px 70px;
+
+    background:var(--navbar-bg);
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+
+/* ============================= */
+/* LOGO */
+/* ============================= */
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.logo a{
+    text-decoration:none;
+    color:var(--text-light);
+}
+
+
+/* ============================= */
+/* NAV LINKS */
+/* ============================= */
+
+.nav-links{
+    list-style:none;
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:var(--text-light);
+    font-size:15px;
+}
+
+
+/* ============================= */
+/* BUTTONS */
+/* ============================= */
+
+.btn{
+    padding:8px 18px;
+    border-radius:6px;
+    font-weight:500;
+    color:var(--text-light);
+}
+
+.signin{
+    background:var(--primary);
+}
+
+.signup{
+    background:var(--primary-hover);
+}
+
+.btn:hover{
+    opacity:0.9;
+}
+
+
+/* ============================= */
+/* CARD STYLE (Reusable) */
+/* ============================= */
+
+.card{
+    background:var(--card-bg);
+    border-radius:12px;
+    box-shadow:var(--shadow-soft);
+    padding:20px;
+}

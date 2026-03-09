@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Explore Hidden Gems</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/explore.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+</head>
+
+<body>
+
+    <nav>
+    <div class="logo"><a href="index.html">NER Tour</a></div>
+
+    <ul class="nav-links">
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="upload.html">Add Hidden Gem</a></li>
+        <li><a href="#">My Bucket List</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+
+        <li><a href="#" class="btn signin">SignIn</a></li>
+        <li><a href="#" class="btn signup">SignUp</a></li>
+    </ul>
+</nav>
+
+    <main class="explore-container">
+
+    <!-- LEFT PANEL -->
+    <div class="sidebar">
+
+        <input type="text" id="searchInput" placeholder="Search location...">
+
+        <div class="filters">
+            <label><input type="checkbox" value="waterfall"> Waterfalls</label>
+            <label><input type="checkbox" value="hill"> Hills</label>
+            <label><input type="checkbox" value="village"> Villages</label>
+            <label><input type="checkbox" value="forest"> Forests</label>
+            <label><input type="checkbox" value="flowers"> Flower Land</label>
+            <label><input type="checkbox" value="flowers"> River</label>
+            <label><input type="checkbox" value="flowers">  Lake </label>
+            <label><input type="checkbox" value="flowers"> Tracking</label>
+            <label><input type="checkbox" value="flowers"> Sunset Point</label>
+            <label><input type="checkbox" value="flowers"> Sunrise Point</label>
+        </div>
+
+        <div id="results"></div>
+
+    </div>
+
+    <!-- MAP -->
+    <div id="map"></div>
+
+</main>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="js/config.js"></script>
+
+
+    <script src="js/demoData.js"></script>    <!-- Temporary -->
+
+    
+    <script src="js/api.js"></script>
+    <script src="js/explore.js"></script>
+</body>
+
+</html>

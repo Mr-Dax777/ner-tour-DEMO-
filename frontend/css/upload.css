@@ -1,0 +1,171 @@
+/* ============================= */
+/* PAGE TITLE */
+/* ============================= */
+
+main h1{
+margin-left:30px;
+margin-bottom:20px;
+font-size:32px;
+}
+
+
+/* ============================= */
+/* LAYOUT */
+/* ============================= */
+
+.upload-container{
+display:flex;
+gap:40px;
+padding:30px;
+align-items:flex-start;
+}
+
+
+/* ============================= */
+/* FORM CARD */
+/* ============================= */
+
+form{
+width:380px;
+
+background:var(--card-bg);
+padding:25px;
+
+border-radius:12px;
+box-shadow:var(--shadow-soft);
+
+display:flex;
+flex-direction:column;
+gap:12px;
+
+height:500px;
+justify-content:space-between;
+}
+
+
+/* ============================= */
+/* INPUTS */
+/* ============================= */
+
+input,
+textarea,
+select{
+padding:10px;
+border-radius:6px;
+
+border:1px solid var(--border-light);
+
+width:100%;
+
+font-size:14px;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+outline:none;
+border-color:var(--primary);
+}
+
+textarea{
+min-height:80px;
+}
+
+
+/* ============================= */
+/* STATE + DISTRICT ROW */
+/* ============================= */
+
+.row{
+display:flex;
+gap:10px;
+}
+
+.row select,
+.row input{
+flex:1;
+}
+
+
+/* ============================= */
+/* MAP SECTION */
+/* ============================= */
+
+.map-section{
+flex:1;
+display:flex;
+flex-direction:column;
+}
+
+.map-section h3{
+margin-bottom:10px;
+font-size:18px;
+font-weight:600;
+}
+
+#map{
+height:500px;
+width:100%;
+border-radius:12px;
+}
+
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+
+button{
+padding:10px;
+border:none;
+border-radius:6px;
+
+background:var(--primary);
+color:var(--text-light);
+
+font-weight:600;
+cursor:pointer;
+}
+
+button:hover{
+background:var(--primary-hover);
+}
+
+
+/* ============================= */
+/* IMAGE PREVIEW */
+/* ============================= */
+
+.image-upload{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.image-preview{
+height:150px;
+
+border:2px dashed var(--border-light);
+border-radius:8px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+position:relative;
+overflow:hidden;
+
+background:var(--page-bg);
+}
+
+.image-preview img{
+width:100%;
+height:100%;
+object-fit:cover;
+display:none;
+}
+
+#previewText{
+position:absolute;
+color:var(--text-muted);
+font-size:14px;
+}

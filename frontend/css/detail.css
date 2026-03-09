@@ -1,0 +1,172 @@
+/* ============================= */
+/* PAGE CONTAINER */
+/* ============================= */
+
+.detail-container{
+padding:30px 60px;
+}
+
+
+/* ============================= */
+/* IMAGE GALLERY */
+/* ============================= */
+
+.gallery{
+display:flex;
+gap:15px;
+margin:20px 0;
+}
+
+.gallery img{
+height:120px;
+border-radius:10px;
+cursor:pointer;
+object-fit:cover;
+transition:0.2s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+
+/* ============================= */
+/* IMAGE MODAL */
+/* ============================= */
+
+.modal{
+display:none;
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.9);
+
+align-items:center;
+justify-content:center;
+
+z-index:999;
+}
+
+.modal img{
+max-width:90%;
+max-height:90%;
+}
+
+.close-btn{
+position:absolute;
+top:20px;
+right:40px;
+
+font-size:40px;
+
+color:var(--text-light);
+
+cursor:pointer;
+font-weight:bold;
+
+z-index:1000;
+}
+
+
+/* ============================= */
+/* PLACE INFO */
+/* ============================= */
+
+.place-info{
+margin-bottom:30px;
+}
+
+.rating{
+font-size:18px;
+margin:10px 0;
+}
+
+
+/* ============================= */
+/* PAGE GRID */
+/* ============================= */
+
+.detail-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+
+/* ============================= */
+/* COMMENTS */
+/* ============================= */
+
+.comments-section textarea{
+width:100%;
+height:90px;
+
+margin:10px 0;
+padding:10px;
+
+border:1px solid var(--border-light);
+border-radius:6px;
+}
+
+.comment-actions{
+display:flex;
+gap:10px;
+margin-bottom:20px;
+}
+
+.comment{
+border-bottom:1px solid var(--border-light);
+padding:10px 0;
+}
+
+
+/* ============================= */
+/* NEARBY LOCATIONS */
+/* ============================= */
+
+.nearby-card{
+border-bottom:1px solid var(--border-light);
+padding:10px 0;
+cursor:pointer;
+}
+
+.nearby-card:hover{
+background:var(--page-bg);
+}
+
+.nearby-item{
+display:flex;
+gap:12px;
+align-items:center;
+
+padding:10px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+transition:0.2s;
+}
+
+.nearby-item:hover{
+background:var(--page-bg);
+}
+
+.nearby-item img{
+width:70px;
+height:50px;
+
+object-fit:cover;
+border-radius:6px;
+}
+
+.nearby-info p{
+margin:0;
+color:var(--text-muted);
+font-size:14px;
+}

@@ -1,12 +1,20 @@
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
 
+async function getGemById(id){
+    const res = await fetch(`http://localhost:5501/api/locations/${id}`);
+
+    if(!res.ok){
+    }
+    return await res.json();
+}
 async function loadDetail() {
 
     if (!id) return;
 
-    const gem = await getGemById(id);
-
+    let gem = await getGemById(id);
+    console.log(gem.data)
+    gem = gem.data;
     document.getElementById("title").innerText = gem.name;
     document.getElementById("description").innerText = gem.description;
     document.getElementById("category").innerText = gem.category;
@@ -15,7 +23,7 @@ async function loadDetail() {
     /* IMAGE GALLERY */
 
     const gallery = document.getElementById("gallery");
-    gallery.innerHTML = "";
+    gallery.innerHTML = " ";
 
     if (gem.images && gem.images.length > 0) {
 
@@ -23,7 +31,7 @@ async function loadDetail() {
 
             const image = document.createElement("img");
 
-            image.src = img;
+            image.src = "uploads/"+img;
 
             image.onclick = () => {
 
@@ -39,30 +47,32 @@ async function loadDetail() {
 
     }
 
+    // console.log(gem.lon);
     // const miniMap = L.map('miniMap').setView([gem.latitude, gem.longitude], 12);
-    
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
-        .addTo(miniMap);
+    // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png')
+    //     .addTo(miniMap);
 
-    L.marker([gem.latitude, gem.longitude]).addTo(miniMap);
+    // L.marker([gem.latitude, gem.longitude]).addTo(miniMap);
 
-    loadComments(id);
+    // loadComments(id);
 
-    loadNearbyPlaces(gem);
+    // loadNearbyPlaces(gem);
 
-    document.getElementById("imageModal").onclick = () => {
-        document.getElementById("imageModal").style.display = "none";
-    };
+    // document.getElementById("imageModal").onclick = () => {
+    //     document.getElementById("imageModal").style.display = "none";
+    // };
 
 
-    document.getElementById("closeModal").onclick = () => {
-        document.getElementById("imageModal").style.display = "none";
-    };
+    // document.getElementById("closeModal").onclick = () => {
+    //     document.getElementById("imageModal").style.display = "none";
+    // };
 }
 
 
 loadDetail();
+
+
 
 
 async function loadComments(id) {
@@ -193,3 +203,31 @@ function getDistance(lat1, lon1, lat2, lon2) {
 
     return R * c;
 }  
+
+
+async function loadNearbyPlaces() {
+
+    const res = await fetch("/api/locations");  
+    let places = await res.json();
+
+    places = places.data;
+    console.log(places)
+    const container = document.getElementById("nearbyPlaces");
+    container.innerHTML = "";
+
+    places.forEach(place => {
+
+        const div = document.createElement("div");
+        div.className = "nearby-item";
+
+        div.innerHTML = `
+            <h4>${place.name}</h4>
+            <p>${place.category}</p>
+        `;
+
+        container.appendChild(div);
+    });
+
+}
+
+loadNearbyPlaces();

@@ -1,111 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <title>Gem Detail</title>
+    <head>
+        <meta charset="UTF-8">
+        <title>Gem Detail</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/detail.css">
-</head>
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/detail.css">
+    </head>
 
-<body>
+    <body>
 
-    <nav>
-        <div class="logo"><a href="index.html">NER Tour</a></div>
+        <nav>
+            <div class="logo"><a href="index.html">NER Tour</a></div>
 
-        <ul class="nav-links">
-            <li><a href="explore.html">Explore</a></li>
-            <li><a href="upload.html">Add Hidden Gem</a></li>
-            <li><a href="#">My Bucket List</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <ul class="nav-links">
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="upload.html">Add Hidden Gem</a></li>
+                <li><a href="#">My Bucket List</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
 
-            <li><a href="#" class="btn signin">SignIn</a></li>
-            <li><a href="#" class="btn signup">SignUp</a></li>
-        </ul>
-    </nav>
+                <li><a href="#" class="btn signin">SignIn</a></li>
+                <li><a href="#" class="btn signup">SignUp</a></li>
+            </ul>
+        </nav>
 
-    <main class="detail-container">
+        <main class="detail-container">
 
-        <h1 id="title"></h1>
+            <h1 id="title"></h1>
 
-        <!-- IMAGE GALLERY -->
-        <div class="gallery" id="gallery"></div>
+            <!-- IMAGE GALLERY -->
+            <div class="gallery" id="gallery"></div>
 
-        <!-- FULL IMAGE MODAL -->
-        <div id="imageModal" class="modal">
+            <!-- FULL IMAGE MODAL -->
+            <div id="imageModal" class="modal">
 
-            <span id="closeModal" class="close-btn">&times;</span>
+                <span id="closeModal" class="close-btn">&times;</span>
 
-            <img id="modalImg">
-
-        </div>
-
-        <!-- INFO -->
-        <div class="place-info">
-            <p id="description"></p>
-
-            <p><b>Category:</b> <span id="category"></span></p>
-
-            <p class="rating">⭐ <span id="rating">0</span> / 5</p>
-
-            <button id="verifyBtn">👍 Verify</button>
-        </div>
-
-        <!-- LOWER SECTION -->
-        <div class="detail-grid">
-
-            <!-- LEFT SIDE -->
-            <div>
-
-                <h2>Nearby Places</h2>
-
-                <div id="nearbyPlaces"></div>
+                <img id="modalImg">
 
             </div>
 
-            <!-- RIGHT SIDE -->
-            <div class="comments-section">
+            <!-- INFO -->
+            <div class="place-info">
+                <p id="description"></p>
 
-                <h2>Comments</h2>
+                <p><b>Category:</b> <span id="category"></span></p>
 
-                <textarea id="commentText" placeholder="Write your experience..."></textarea>
+                <p class="rating">⭐ <span id="rating">0</span> / 5</p>
 
-                <div class="comment-actions">
+                <button id="verifyBtn">👍 Verify</button>
+            </div>
 
-                    <select id="ratingSelect">
-                        <option value="5">⭐ 5</option>
-                        <option value="4">⭐ 4</option>
-                        <option value="3">⭐ 3</option>
-                        <option value="2">⭐ 2</option>
-                        <option value="1">⭐ 1</option>
-                    </select>
+            <!-- LOWER SECTION -->
+            <div class="detail-grid">
 
-                    <button onclick="submitComment()">Post Comment</button>
+                <!-- LEFT SIDE -->
+                <div>
+
+                    <h2>Nearby Places</h2>
+
+                    <div id="nearbyPlaces"></div>
 
                 </div>
 
-                <div id="comments"></div>
+                <!-- RIGHT SIDE -->
+                <div class="comments-section">
+
+                    <h2>Comments</h2>
+
+                    <textarea id="commentText" placeholder="Write your experience..."></textarea>
+
+                    <div class="comment-actions">
+
+                        <select id="ratingSelect">
+                            <option value="5">⭐ 5</option>
+                            <option value="4">⭐ 4</option>
+                            <option value="3">⭐ 3</option>
+                            <option value="2">⭐ 2</option>
+                            <option value="1">⭐ 1</option>
+                        </select>
+
+                        <button onclick="submitComment()">Post Comment</button>
+
+                    </div>
+
+                    <div id="comments"></div>
+
+                </div>
 
             </div>
 
-        </div>
+        </main>
 
-    </main>
-
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="js/config.js"></script>
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script src="js/config.js"></script>
 
 
-    <script src="js/demoData.js"></script> <!-- temporary -->
+        <script src="js/demoData.js"></script> <!-- temporary -->
 
 
-    <script src="js/api.js"></script>
-    <script src="js/detail.js"></script>
+        <script src="js/api.js"></script>
+        <script src="js/detail.js"></script>
 
-</body>
+    </body>
 
-</html>
+    </html>

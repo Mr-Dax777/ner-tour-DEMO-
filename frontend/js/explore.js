@@ -142,27 +142,27 @@ function openDetail(id){
 const icons = {
 
     waterfall: L.icon({
-        iconUrl: "assets/icons/waterfallMarker.png",
+        iconUrl: "assets/icons/icons8-waterfall.png",
         iconSize: [32, 32]
     }),
 
     hill: L.icon({
-        iconUrl: "assets/icons/hill.png",
+        iconUrl: "assets/icons/icons8-hill.png",
         iconSize: [32, 32]
     }),
 
     village: L.icon({
-        iconUrl: "assets/icons/village.png",
+        iconUrl: "assets/icons/icons8-village.png",
         iconSize: [32, 32]
     }),
 
     forest: L.icon({
-        iconUrl: "assets/icons/forestMarker.png",
+        iconUrl: "assets/icons/icons8-forest.png",
         iconSize: [32, 32]
     }),
 
     river: L.icon({
-        iconUrl: "assets/icons/riverMarker.png",
+        iconUrl: "assets/icons/icons8-river.png",
         iconSize: [32, 32]
     }),
 

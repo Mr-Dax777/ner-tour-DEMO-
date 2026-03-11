@@ -18,7 +18,7 @@ imageInput.addEventListener("change", function () {
         reader.addEventListener("load", function () {
 
             previewImage.setAttribute("src", this.result);
-            previewImage.style.display = "block";
+            previewImage.style.display = "block";   
             previewText.style.display = "none";
 
         });

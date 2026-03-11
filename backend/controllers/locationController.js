@@ -2,6 +2,7 @@ const Location = require('../models/location');
 
 // Add location
 const createLocation = async (req, res) => {
+
     console.log(req.body);
     req.longitude = 95.278207;
     req.latitude = 27.623393;
@@ -15,6 +16,8 @@ const createLocation = async (req, res) => {
 
 // Get all locations
 const getLocations = async (req, res) => {
+    console.log("eh");
+
     try {
         const { state, category, page=1, limit=100} = req.query;
 
@@ -46,6 +49,7 @@ const getLocations = async (req, res) => {
 
 //get single location by id
 const getLocationById = async (req, res) => {
+
     try{
         const location = await Location.findById(req.params.id);
 
@@ -71,6 +75,7 @@ const getLocationById = async (req, res) => {
 
 //update location
 const updateLocation = async (req, res) => {
+
     try{
         const location = await Location.findByIdAndUpdate(
             req.params.id,
@@ -97,6 +102,7 @@ const updateLocation = async (req, res) => {
 
 //delete location
 const deleteLocation = async (req, res) => {
+
     try{
         const location = await Location.findByIdAndDelete(req.params.id);
 
@@ -120,6 +126,7 @@ const deleteLocation = async (req, res) => {
 
 // image upload controller
 const uploadImage = async (req, res) => {
+
     try{
         const location = await Location.findById(req.params.id);
 
@@ -142,8 +149,11 @@ const uploadImage = async (req, res) => {
     }
 }
 
+
+
 // get hidden gems
 const getHiddenGems = async (req, res) => {
+
     try{
         const locations = await Location.find({
             rating: { $gte: 4 },

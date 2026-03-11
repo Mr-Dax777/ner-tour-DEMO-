@@ -170,3 +170,37 @@ margin:0;
 color:var(--text-muted);
 font-size:14px;
 }
+
+#nearbyPlaces{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:18px;
+    margin-top:25px;
+}
+
+.nearby-item{
+    background:white;
+    border-radius:12px;
+    padding:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition:all 0.25s ease;
+    cursor:pointer;
+}
+.nearby-item:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.12);
+}
+
+
+.nearby-item h4{
+    margin:0;
+    font-size:16px;
+    font-weight:600;
+    color:#222;
+}
+
+.nearby-item p{
+    margin-top:5px;
+    font-size:14px;
+    color:#666;
+}
